@@ -11,7 +11,7 @@ from sklearn.metrics import classification_report
 from matplotlib import pyplot as plt
 
 
-(mnist_train, X_train, y_train) ,(mnist_test, X_test, y_test) = get_gp_mnist_data('my_model.h5')
+(mnist_train, X_train, y_train), (mnist_test, X_test, y_test) = get_gp_mnist_data('my_model.h5')
 
 print(X_train.shape)
 print(y_train.shape)
@@ -41,7 +41,8 @@ m.kern.white.variance.trainable = False
 m.feature.trainable = False
 print(m.as_pandas_table())
 
-opt = gpflow.train.ScipyOptimizer()\nopt.minimize(m)
+opt = gpflow.train.ScipyOptimizer()
+opt.minimize(m)
 print("Optimisation done")
 X_test = X_test.astype('float64').reshape(-1,num_features)
 p, var = m.predict_y(X_test)

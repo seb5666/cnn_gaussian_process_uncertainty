@@ -12,10 +12,11 @@ from matplotlib import pyplot as plt
 
 import time
 
-load_data_from_disk = True
+load_data_from_disk = False
 restore_model = True
 
 if load_data_from_disk:
+    
     mnist_train = np.load('data/mnist_train.npy')
     X_train = np.load('data/X_train.npy')
     y_train = np.load('data/y_train.npy')
@@ -24,7 +25,20 @@ if load_data_from_disk:
     y_test = np.load('data/y_test.npy')
     print("Loaded data")
 else:
-    (mnist_train, X_train, y_train) ,(mnist_test, X_test, y_test) = get_gp_mnist_data('my_model.h5')
+    (mnist_train, y_train), (mnist_test, y_test) = mnist.load_data()
+    
+    mnist_train = mnist_train.astype('float32')
+    mnist_test = mnist_test.astype('float32')
+
+    mnist_train /= 255
+    mnist_test /= 255
+    
+    mnist_train = mnist_train.reshape(mnist_train.shape[0], 28, 28, 1)
+    mnist_test = mnist_test.reshape(mnist_test.shape[0], 28, 28, 1)
+    
+    X_train = get_gp_mnist_data('my_model.h5', mnist_train)
+    X_test = get_gp_mnist_data('my_model.h5', mnist_test)
+    
     np.save('data/mnist_train.npy', mnist_train)
     np.save('data/X_train.npy', X_train)
     np.save('data/y_train.npy', y_train)

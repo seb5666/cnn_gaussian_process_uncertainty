@@ -3,3 +3,4 @@ data/
 models/
 
 __pycache__/
+*.swp

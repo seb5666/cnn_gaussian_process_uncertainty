@@ -2,7 +2,7 @@ import keras
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Conv2D, MaxPooling2D, Lambda
 from keras import backend as K
 
 batch_size = 128
@@ -55,5 +55,8 @@ model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, val
 score = model.evaluate(X_test, y_test, verbose=0)
 print("Test loss: {}".format(score[0]))
 print("Test accuracy: {}".format(score[1]))
+
+model.save("permanent_dropout_model.h5")
+
 
 

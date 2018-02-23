@@ -1,9 +1,17 @@
 import keras
+import tensorflow as tf
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
-from keras import backend as K
+import keras.backend.tensorflow_backend as K
+import keras.backend.tensorflow_backend as K
+
+import numpy as np
+import time
+
+start = time.time()
+print(start)
 
 batch_size = 128
 num_classes = 10
@@ -38,6 +46,7 @@ print(X_test.shape[0], 'test samples')
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
+#K.set_session(K.tf.Session(config=K.tf.ConfigProto(allow_soft_placement=True, log_device_placement=True)))
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3,3), activation='relu', input_shape=input_shape)) 
 model.add(Conv2D(64, (3,3), activation='relu'))
@@ -55,4 +64,6 @@ score = model.evaluate(X_test, y_test, verbose=0)
 print("Test loss: {}".format(score[0]))
 print("Test accuracy: {}".format(score[1]))
 
+print("Time: {}".format(time.time()-start))
 
+model.save('my_model.h5') 

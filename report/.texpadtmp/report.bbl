@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:journals/corr/GuWKMSSLWW15}
+Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
+  Ting Liu, Xingxing Wang, and Gang Wang.
+\newblock Recent advances in convolutional neural networks.
+\newblock {\em CoRR}, abs/1512.07108, 2015.
+
+\bibitem{adam}
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  24 FEB 2018 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  25 FEB 2018 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -610,21 +610,21 @@ File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
 )) (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -718,7 +718,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 51.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -726,14 +726,14 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.out) (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 49.
+LaTeX Info: Redefining \microtypecontext on input line 51.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -747,25 +747,25 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 53.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 55.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -774,74 +774,74 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 73.
+(hyperref)                removing `\begingroup' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 73.
+(hyperref)                removing `\<let>-command' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 73.
+(hyperref)                removing `\NAT@ctype' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 73.
+(hyperref)                removing `\z@' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 73.
+(hyperref)                removing `\let' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 73.
+(hyperref)                removing `\let' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 73.
+(hyperref)                removing `\new@ifnextchar' on input line 75.
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 78.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
  [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] <../figs/embeddings_visualisation.png, id=73, 381.425pt x 252.945pt>
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] <../figs/embeddings_visualisation.png, id=90, 381.425pt x 252.945pt>
 File: ../figs/embeddings_visualisation.png Graphic file (type png)
  <use ../figs/embeddings_visualisation.png>
-Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 141.
+Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 173.
 (pdftex.def)             Requested size: 381.42406pt x 252.94438pt.
- (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl [3 <../figs/embeddings_visualisation.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+ [3] (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
+ [4 <../figs/embeddings_visualisation.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
- 8941 strings out of 493014
- 134308 string characters out of 6133350
- 260930 words of memory out of 5000000
- 12239 multiletter control sequences out of 15000+600000
- 36759 words of font info for 96 fonts, out of 8000000 for 9000
+ 8970 strings out of 493014
+ 134719 string characters out of 6133350
+ 260966 words of memory out of 5000000
+ 12248 multiletter control sequences out of 15000+600000
+ 37345 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,12n,38p,522b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,12n,38p,1228b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (4 pages, 196313 bytes).
+Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (4 pages, 206172 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 21086 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 21118 words of extra memory for PDF output out of 24883 (max. 10000000)
 

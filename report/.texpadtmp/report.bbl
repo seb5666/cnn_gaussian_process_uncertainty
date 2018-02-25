@@ -11,4 +11,10 @@ Diederik~P Kingma and Jimmy Ba.
 \newblock Adam: A method for stochastic optimization.
 \newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
 
+\bibitem{villacampa2017scalable}
+Carlos Villacampa-Calvo and Daniel Hern{\'a}ndez-Lobato.
+\newblock Scalable multi-class gaussian process classification using
+  expectation propagation.
+\newblock {\em arXiv preprint arXiv:1706.07258}, 2017.
+
 \end{thebibliography}

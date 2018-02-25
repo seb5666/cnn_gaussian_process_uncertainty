@@ -3,6 +3,7 @@ import tensorflow as tf
 
 from keras.datasets import mnist
 
+from matplotlib import pyplot as plt
 
 inputs = tf.placeholder(shape=(None, 28, 28, 1), dtype=tf.float32)
 labels = tf.placeholder(shape=(None), dtype=tf.int32)
@@ -72,6 +73,17 @@ def get_data():
 
     return (X_train, y_train), (X_val, y_val), (X_test, y_test)
 
+def draw_probs(prob, var=None, axes=None):
+    axes.bar(np.arange(10), prob, yerr=var)
+    axes.set_ylim([0,1])
+    axes.set_xticks(np.arange(10))
+
+def draw_img(img, axes,title=""):
+    axes.imshow(img.reshape(28,28),cmap =plt.cm.gray_r)
+    axes.set_xticks([])
+    axes.set_yticks([])
+    axes.set_title(title)
+
 with tf.Session() as sess:
     
     (X_train, y_train), (X_val, y_val), (X_test, y_test) = get_data()
@@ -138,19 +150,26 @@ with tf.Session() as sess:
     wrong_index = np.argwhere(predictions_ != y_test)[0, 0]
 
     print("Test image index: {}".format(wrong_index))
-    
-    T = 3
-    img = [X_test[wrong_index]] * T
-    img_label = [y_test[wrong_index]] * T
-    print("Assigned label: {}".format(img_label))
+    print(predictions_[wrong_index])
+    print("Predicted label: {}".format(predictions_[wrong_index]))
     print("Correct label: {}".format(y_test[wrong_index]))
 
-    preds_ = sess.run(predictions, feed_dict={inputs:img, labels:img_label, p:0.2})
-    probabilities = preds_['probabilities']
-    print(probabilities.shape)
-    pred_means = np.mean(probabilities, axis=0)
-    pred_std = np.std(probabilities, axis=0)
-    
-    print("means: ", pred_means)
-    print("stds: ", pred_std)
+    Ts = [10, 100, 1000]
+    ps = [0.1, 0.2, 0.3]
 
+    fig = plt.figure()
+
+    for i, dropout_p in enumerate(ps):
+        for j, T in enumerate(Ts):
+            img = [X_test[wrong_index]] * T
+            img_label = [y_test[wrong_index]] * T
+            preds_ = sess.run(predictions, feed_dict={inputs:img, labels:img_label, p:dropout_p})
+            probabilities = preds_['probabilities']
+            pred_means = np.mean(probabilities, axis=0)
+            pred_stds = np.std(probabilities, axis=0)
+
+            ax = fig.add_subplot(len(ps),len(Ts), i*len(ps) + j + 1)
+            ax.set_title("T={}, p={}".format(T, dropout_p))
+            draw_probs(pred_means, pred_stds, ax)
+
+    plt.show()

@@ -12,8 +12,9 @@ from matplotlib import pyplot as plt
 
 import time
 
-load_data_from_disk = False
+load_data_from_disk = True
 restore_model = True
+save_model = False
 
 if load_data_from_disk:
     
@@ -86,11 +87,11 @@ p, var = m.predict_y(X_test)
 print("Predictions for test data done")
 print(p.shape)
 
-
-saver = tf.train.Saver()
-sess = gpflow.session_manager.get_default_session()
-saver.save(sess, "models/gp.ckpt")
-print("saved vars")
+if save_model:
+    saver = tf.train.Saver()
+    sess = gpflow.session_manager.get_default_session()
+    saver.save(sess, "models/gp.ckpt")
+    print("saved vars")
 
 
 predictions = np.argmax(p, axis=-1)

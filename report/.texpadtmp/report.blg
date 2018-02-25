@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux
 The style file: unsrt.bst
 Database file #1: ../bib.bib
-You've used 2 entries,
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            457 strings with 4104 characters,
-and the built_in function-call counts, 409 in all, are:
-= -- 25
-> -- 37
+            462 strings with 4300 characters,
+and the built_in function-call counts, 556 in all, are:
+= -- 37
+> -- 45
 < -- 0
-+ -- 13
-- -- 11
-* -- 28
-:= -- 85
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 2
++ -- 16
+- -- 13
+* -- 33
+:= -- 112
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 16
-empty$ -- 29
-format.name$ -- 11
-if$ -- 80
+cite$ -- 3
+duplicate$ -- 24
+empty$ -- 43
+format.name$ -- 13
+if$ -- 112
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 4
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 7
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 8
+skip$ -- 12
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 23
+while$ -- 3
+width$ -- 4
+write$ -- 33

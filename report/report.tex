@@ -28,6 +28,8 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 
+\DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
+
 \title{Gaussian process classifiers and CNN uncertainty}
 
 % The \author macro works with any number of authors. There are two
@@ -122,12 +124,42 @@ The mean function $m(x)$ and the covariance function $k(x,x')$ are typically par
 \end{equation*}
 This optimisation can be done using standard gradient methods.
 \subsubsection{Classification}
-Explain how classification is done with GPs, explain the difficulties
+\paragraph{Binary classification} using Gaussian processes can be done by setting a GP prior over a latent function $f(\mathbf{x})$ and then using squashing function such as the sigmoid to obtain a probability:
+\begin{equation*}
+	\pi(\mathbf{x}) = p(y = +1 \vert \mathbf{x}) = \sigma(f(\mathbf{x}))
+\end{equation*}
+Inference is done in two steps. First, compute the distribution of the latent variable corresponding to a new test input $\mathbf{x}_*$
+\begin{equation*}
+	p(f_*  \vert \mathbf{X}, \mathbf{y}, \mathbf{x}_*) = \int p (f_*  \vert \mathbf{X}, \mathbf{x}_*, \mathbf{f}) p(\mathbf{f} \vert \mathbf{X}, \mathbf{y}) d\mathbf{f}.
+\end{equation*}
+Second, use this distribution to compute a probabilistic prediction
+\begin{equation*}
+	\bar{\pi}_* = p(y_* = +1 |\mathbf{X}, \mathbf{y}, \mathbf{x}_*) = \int \sigma(f_*) p(f_*  \vert \mathbf{X}, \mathbf{y}, \mathbf{x}_*) df_*
+\end{equation*}
+As the likelihood is non longer Gaussian, the first integral becomes analytically intractable. Similarly, depending on the sigmoid function, the second integral can also be intractable. Hence, we need to use approximations, either analytical or numerical, for example using Monte Carlo sampling, to solve the integrals.
+
+
+\paragraph{Multi-class classification} is typically \cite{villacampa2017scalable} approached by assuming the following labelling rule for $y_*$ given $\mathbf{x}_*$:
+\begin{equation*}
+	y_* = \argmax_k f^k(\mathbf{x}_*),\ \textrm{for}\ k=1,\dots,C
+\end{equation*} 
+where each $f^k(\cdot)$ is a nonlinear latent function with a GP prior. The likelihood is again non-Gaussian meaning that approximation techniques have to be used to perform inference and to optimise the hyper-parameters.
+
+
+TODO: Explain how classification is done with GPs, explain the difficulties. Say something about approximation techniques?
+
+\subsection{Uncertainty in Deep Learning}
 
 \section{Method}
-\subsection{Network architecture}
+\subsection{Convolutional Neural Network architecture}
+The first step consists in training a convolutional neural network on the MNIST dataset. This is made very easy through different libraries, for example Keras (CITATION) which can be used as an extra abstraction layer above TensorFlow. I use the network architecture provided in the Keras tutorial for image classifcation on MNIST. The network consists of two convolutional layers with $3 \times 3$ kernels and ReLU activations, where $\textrm{ReLU}(x) = \max(x, 0)$. The first layer has 32 feature maps and the second layer has 64. A max-pooling layer with kernel size $2 \times 2$ is then applied to the output of the convolutional layer. The final 2 layers are fully connected layers, with hidden sizes of 128 and 10 respectively. The first fully connected layer has a ReLU activation. The last layer uses a softmax, which outputs a probability distribution over the 10 classes representing the 10 digits. Furthermore, Dropout (CITATION) is applied after the max-pooling layer with $p=0.25$ and after the first fully connected layer with $p=0.5$, where $p$ is the probability of dropping a neuron. The network is trained using an Adadelta optimiser over 10 epochs with batches of size 128.
+
 \subsection{Gaussian process}
+
 \subsection{Metrics}
+\subsubsection{Accuracy}
+\subsubsection{0-d-1 loss?}
+\subsubsection{With reject cost}
 
 \section{Results}
 

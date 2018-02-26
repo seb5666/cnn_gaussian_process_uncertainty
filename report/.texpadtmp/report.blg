@@ -3,44 +3,53 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux
 The style file: unsrt.bst
 Database file #1: ../bib.bib
-You've used 3 entries,
+"{" immediately follows a field part---line 39 of file ../bib.bib
+ : title = “
+ :            {{GP}flow: A {G}aussian process library using {T}ensor{F}low}”,
+I'm skipping whatever remains of this entry
+Warning--empty journal in hensman2015scalable
+Warning--empty title in GPflow2017
+Warning--empty journal in GPflow2017
+Warning--empty year in GPflow2017
+You've used 6 entries,
             1791 wiz_defined-function locations,
-            462 strings with 4300 characters,
-and the built_in function-call counts, 556 in all, are:
-= -- 37
-> -- 45
+            473 strings with 4938 characters,
+and the built_in function-call counts, 1133 in all, are:
+= -- 68
+> -- 102
 < -- 0
-+ -- 16
-- -- 13
-* -- 33
-:= -- 112
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 3
++ -- 36
+- -- 30
+* -- 80
+:= -- 221
+add.period$ -- 16
+call.type$ -- 6
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 24
-empty$ -- 43
-format.name$ -- 13
-if$ -- 112
+cite$ -- 10
+duplicate$ -- 48
+empty$ -- 85
+format.name$ -- 30
+if$ -- 225
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 3
-pop$ -- 7
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 31
+num.names$ -- 6
+pop$ -- 20
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 22
 stack$ -- 0
 substring$ -- 0
-swap$ -- 3
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 3
-width$ -- 4
-write$ -- 33
+warning$ -- 4
+while$ -- 6
+width$ -- 7
+write$ -- 58
+(There was 1 error message)

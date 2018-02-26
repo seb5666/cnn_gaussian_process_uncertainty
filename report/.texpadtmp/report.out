@@ -12,4 +12,9 @@
 \BOOKMARK [3][-]{subsubsection.2.3.2}{0-d-1 loss?}{subsection.2.3}% 12
 \BOOKMARK [3][-]{subsubsection.2.3.3}{With reject cost}{subsection.2.3}% 13
 \BOOKMARK [1][-]{section.3}{Results}{}% 14
-\BOOKMARK [1][-]{section.4}{Discussion}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{MNIST dataset}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Noisy MNIST \(n-MNIST\) DBLP:journals/corr/BasuKGDMN15}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.3}{Uncertainty with additive white noise}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.4}{Uncertainty with rotated images}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 19
+\BOOKMARK [2][-]{subsection.4.1}{CNN features visualisation}{section.4}% 20

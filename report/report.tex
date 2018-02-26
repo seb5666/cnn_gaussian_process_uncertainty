@@ -9,7 +9,7 @@
 
 \usepackage{graphicx}
 \usepackage{amsmath}
-
+\usepackage{float}
 \usepackage{bm}
 
 \graphicspath{ {../figs/}}
@@ -149,12 +149,22 @@ where each $f^k(\cdot)$ is a nonlinear latent function with a GP prior. The like
 TODO: Explain how classification is done with GPs, explain the difficulties. Say something about approximation techniques?
 
 \subsection{Uncertainty in Deep Learning}
+Obtaining uncertainty bounds in deep learning would be without doubt of great benefit to many fields. An autonomous car could make much safer decisions knowing how much uncertainty there is in the consequence of taking different actions. When using current deep learning methods we only have point estimates of parameters and predictions (CITE DL BOOK). Despite the fact the output of a softmax layer in a classification task can be interpreted as a probability distribution $p(y_i = k) = f(x_i)_k$, it doesn't say anything about how certain the model is: The model could assign a high probability to a class but can still be highly uncertain about it (CITE GAL). 
+
+One way to get uncertainty from deep learning models was discovered by Yarin Gal (GAL THESIS). In fact, there is a rather subtle but deep connection between Gaussian Process and neural networks. In particular, he showed that using Dropout not only at training time but also at test time, and obtaining multiple estimates for a single test example allows us to compute the uncertainty in a principled manner by taking the sample variance of those predictions (CITATION).
+
+In this project, I focus on a different way to obtain those uncertainty bounds: Using a Gaussian process trained on the features extracted by a CNN that was trained in a previous step. It should be noted that this is a less theoretically grounded approach than the one taking by Gal (CITE), but nonetheless provides a practical way of getting uncertainty whilst keeping the power of neural networks. 
 
 \section{Method}
 \subsection{Convolutional Neural Network architecture}
-The first step consists in training a convolutional neural network on the MNIST dataset. This is made very easy through different libraries, for example Keras (CITATION) which can be used as an extra abstraction layer above TensorFlow. I use the network architecture provided in the Keras tutorial for image classifcation on MNIST. The network consists of two convolutional layers with $3 \times 3$ kernels and ReLU activations, where $\textrm{ReLU}(x) = \max(x, 0)$. The first layer has 32 feature maps and the second layer has 64. A max-pooling layer with kernel size $2 \times 2$ is then applied to the output of the convolutional layer. The final 2 layers are fully connected layers, with hidden sizes of 128 and 10 respectively. The first fully connected layer has a ReLU activation. The last layer uses a softmax, which outputs a probability distribution over the 10 classes representing the 10 digits. Furthermore, Dropout (CITATION) is applied after the max-pooling layer with $p=0.25$ and after the first fully connected layer with $p=0.5$, where $p$ is the probability of dropping a neuron. The network is trained using an Adadelta optimiser over 10 epochs with batches of size 128.
+The first step consists in training a convolutional neural network on the MNIST dataset, which can be done using one of the many deep learning libraries. For example, I use Keras (CITATION) which defines an extra abstraction layer above TensorFlow. The network architecture is provided in the Keras tutorial for image classifcation on MNIST. The first two layers are convolutional layers $3 \times 3$ kernels and ReLU activations, where $\textrm{ReLU}(x) = \max(x, 0)$. The first layer has 32 feature maps and the second layer has 64. A max-pooling layer with kernel size $2 \times 2$ is then applied to the output of the convolutional layer. The final 2 layers are fully connected layers, with hidden sizes of 128 and 10 respectively. The first fully connected layer has a ReLU activation. The last fully connected layer uses a softmax activation, which outputs a probability distribution over the 10 classes representing the 10 digits. Furthermore, Dropout (CITATION) is applied after the max-pooling layer with $p=0.25$ and after the first fully connected layer with $p=0.5$, where $p$ is the probability of dropping a neuron. The network is trained using an Adadelta optimiser over 10 epochs with batches of size 128.
 
 \subsection{Gaussian process}
+Using the trained CNN model, we can extract the activations in the last hidden layer. These correspond to a vector of size 128 for each input image, and can be thought of as the features extracted by the CNN for classification. I then train a Gaussian Process using these features. This has the advantage of being a much lower dimensional classification task compared to classifying the entire input image directly, which has dimension $28 \times 28 = 784$. However, the MNIST dataset, with 60,000 training images, is still considered a large dataset for GPs because inference takes $\mathcal{O}(n^3)$ time where $n$ is the number of training instances \cite{hensman2015scalable}. To make the training possible, I use GPFlow \cite{GPflow2017}, which implements various approximation algorithms for Gaussian Processes on TensorFlow, which has the further advantage of being trainable on a GPU out-of-the-box. More precisely, I use the Sparse Variational Gaussian Process Classifier presented by Hensman et al.\ \cite{hensman2015scalable}. The model learns a set of inducing points of size $m$ which are then used instead of the training points. Typically, $m < n$, which makes the task tractable as its complexity is $\mathcal{O}(nm^2)$. For the experiments done in this project I chose to use 600 inducing points, which allowed the model to be trained in about 15 minutes on a NVidia Titan Xp GPU.
+
+TODO: Describe kernels used and likelihood
+
+TOOD: Add figure of the model...
 
 \subsection{Metrics}
 \subsubsection{Accuracy}
@@ -162,14 +172,88 @@ The first step consists in training a convolutional neural network on the MNIST 
 \subsubsection{With reject cost}
 
 \section{Results}
+\subsection{MNIST dataset}
+The MNIST dataset is consider a toy dataset in deep learning and is generally seen as a ``unit test'' for models. In fact, using the model provided in the Keras tutorial and presented above, I obtain an accuracy of 99.12\% on the held-out test images. This means that only 88 of the 10,000 test images are misclassified.
+
+Using the Gaussian process with the CNN features, the accuracy of the model on the test images improves to 99.28\%, reducing the number of misclassified images to 72. Although this increase in performance might seem surprising at first, it can be explained by the fact that the Gaussian process is a more complex model than the last layer of the CNN, which just computes a linear combination of the features and then applies the softmax activation.
+
+\begin{table}[h]
+\centering	
+\begin{tabular}{ c | c c}
+\textbf{Model} & \textbf{Accuracy} & \textbf{Misclassified images}\\
+\hline
+CNN & 99.12\% & 88 \\
+GP & 99.28\%  & 72\\
+\end{tabular}
+\caption{MNIST test images accuracy for the CNN and the GP.}
+\label{table/mnist_acc}
+\end{table}
+
+Furthermore, we can inspect the uncertainty the Gaussian process assigns to different test images. The model gives the correct class probability with a standard deviation of less than 0.1 for 97.3\% of the correctly classified images. For the incorrectly classified images, the most standard deviation of the most likely class is below 0.1 for only 19.4\% of the images. This suggests that the model is generally less certain of its prediction in the cases it got the classification wrong. The cumulative distribution of standard deviations is shown in figure \ref{fig/mnist_cum_stds}. The plot supports the claim that the model is less certain for the misclassified images as the standard deviation for the most likely class is higher for a larger proportion of those images that were misclassified.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{mnist_cum_stds}
+	\caption{Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images.}
+	\label{fig/mnist_cum_stds}
+\end{figure}
+
+\subsection{Noisy MNIST (n-MNIST) \cite{DBLP:journals/corr/BasuKGDMN15}}
+\begin{table}[h]
+\centering	
+\begin{tabular}{ c | c c c}
+\textbf{Model} & \multicolumn{3}{c}{\textbf{Accuracy}}\\
+& AWGN & Motion blur & Reduced contrast\\
+\hline
+CNN & 99.12\% & 88 & fs\\
+GP & 93.34\%  & 92.09\% & 70.13\%\\
+\end{tabular}
+\caption{MNIST test images accuracy for the CNN and the GP.}
+\label{table/noisy_mnist_acc}
+\end{table}
+
+-Accuracies on noisy MNIST
+-- CNN
+-- GP
+0.9334
+0.9209
+0.7013
+We can again inspect how uncertain the model is when classifying the noisy dataset. The cumulative distributions for the additive white gaussian noise, motion blur and reduced contrast datasets is shown in figure \ref{fig/noisy_mnist_cum_stds}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{noisy_mnist_cum_stds}
+	\caption{Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images.}
+	\label{fig/noisy_mnist_cum_stds}
+\end{figure}
+
+As one would hope, the uncertainty increases as the model is asked to classify images increasingly different images from those it was trained on. This is also called \textbf{out-of-distribution} classification. The uncertainty for the additive white Guassian noise (AWGN) images is higher than the uncertainty for the standard MNIST test set. This is shown by the fact that the cumulative distribution for the correctly classified images in the AWGN images is lower. Similarly, the cumulative distribution further decreases for the motion blur and reduced contrast images, with a lower classification accuracy corresponding to a higher uncertainty.
+
+\subsection{Uncertainty with additive white noise}
+
+-Use continuous adding noise, see if uncertainty increases.
+
+\subsection{Uncertainty with rotated images}
+-Use rotation of an image, e.g. Yarin Gal
+
 
 \section{Discussion}
 More quantitave evalution of the results.
+
 Show examples of images that are missclassified.
-Discuss definition of the metrics.
 \begin{figure}[h]
 	\centering
-	\includegraphics{embeddings_visualisation.png}
+	\includegraphics[scale=0.6]{incorrect_mnist}
+	\caption{Test images misclassified images by the GP model.}
+\end{figure}
+
+
+Discuss definition of the metrics.
+
+ADD VISUALLISATION of n-MNIST features
+\subsection{CNN features visualisation}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{embeddings_visualisation.png}
 	\caption{Test point embedding using t-SNE}
 \end{figure}
 

@@ -17,4 +17,21 @@ Carlos Villacampa-Calvo and Daniel Hern{\'a}ndez-Lobato.
   expectation propagation.
 \newblock {\em arXiv preprint arXiv:1706.07258}, 2017.
 
+\bibitem{hensman2015scalable}
+James Hensman, Alexander G de~G Matthews, and Zoubin Ghahramani.
+\newblock Scalable variational gaussian process classification.
+\newblock 2015.
+
+\bibitem{GPflow2017}
+Alexander G. de~G. Matthews, Mark {van der Wilk}, Tom Nickson, Keisuke. Fujii,
+  Alexis {Boukouvalas}, Pablo {Le{‘o}n-Villagr{‘a}}, Zoubin Ghahramani, and
+  James Hensman.
+
+\bibitem{DBLP:journals/corr/BasuKGDMN15}
+Saikat Basu, Manohar Karki, Sangram Ganguly, Robert DiBiano, Supratik
+  Mukhopadhyay, and Ramakrishna~R. Nemani.
+\newblock Learning sparse feature representations using probabilistic quadtrees
+  and deep belief nets.
+\newblock {\em CoRR}, abs/1509.03413, 2015.
+
 \end{thebibliography}

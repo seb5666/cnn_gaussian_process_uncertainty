@@ -57,7 +57,7 @@ X_test = X_test.astype('float64').reshape(-1,num_features)
 
 kernel = gpflow.kernels.Matern32(num_features) + gpflow.kernels.White(num_features, variance=0.01)
 likelihood = gpflow.likelihoods.MultiClass(num_classes)
-Z=X_train[::1000].copy()
+Z=X_train[::100].copy()
 num_latent=num_classes
 whiten=True
 q_diag=True

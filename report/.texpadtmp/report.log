@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  25 FEB 2018 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  26 FEB 2018 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -101,6 +101,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2016/02/27 v1.2a Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
@@ -119,7 +126,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count100
+\c@NAT@ctr=\count101
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -130,9 +137,9 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count101
-\Gm@cntv=\count102
-\c@Gm@tempcnt=\count103
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
 \Gm@bindingoffset=\dimen114
 \Gm@wd@mp=\dimen115
 \Gm@odd@mp=\dimen116
@@ -141,14 +148,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen119
 \Gm@layouthoffset=\dimen120
 \Gm@layoutvoffset=\dimen121
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks22
 )
 \@nipsabovecaptionskip=\skip48
 \@nipsbelowcaptionskip=\skip49
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
@@ -505,14 +512,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen122
-\Hy@linkcounter=\count104
-\Hy@pagecounter=\count105
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count106
+\Hy@SavedSpaceFactor=\count107
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -523,14 +530,14 @@ Package hyperref Info: Plain pages OFF on input line 4461.
 Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count107
+\c@Hy@tempcnt=\count108
  (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5044.
 \XeTeXLinkMargin=\dimen123
-\Fld@menulength=\count108
+\Fld@menulength=\count109
 \Field@Width=\dimen124
 \Fld@charsize=\dimen125
 Package hyperref Info: Hyper figures OFF on input line 6298.
@@ -542,17 +549,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6323.
 Package hyperref Info: PDF/A mode OFF on input line 6328.
 LaTeX Info: Redefining \ref on input line 6368.
 LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count109
-\c@Item=\count110
-\c@Hfootnote=\count111
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
-\Fld@listcount=\count112
-\c@bookmark@seq@number=\count113
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
  (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
@@ -570,12 +577,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen133
 \cmidrulekern=\dimen134
 \defaultaddspace=\dimen135
-\@cmidla=\count114
-\@cmidlb=\count115
+\@cmidla=\count115
+\@cmidlb=\count116
 \@aboverulesep=\dimen136
 \@belowrulesep=\dimen137
-\@thisruleclass=\count116
-\@lastruleclass=\count117
+\@thisruleclass=\count117
+\@lastruleclass=\count118
 \@thisrulewidth=\dimen138
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -592,12 +599,12 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
-\MT@toks=\toks23
-\MT@count=\count118
+\MT@toks=\toks25
+\MT@count=\count119
 LaTeX Info: Redefining \textls on input line 774.
 \MT@outer@kern=\dimen139
 LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
-\MT@listname@count=\count119
+\MT@listname@count=\count120
  (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2016/05/14 v2.6a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 916.
@@ -629,17 +636,17 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
+\scratchcounter=\count121
 \scratchdimen=\dimen140
-\scratchbox=\box28
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count123
+\scratchbox=\box30
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count124
 \MPscratchDim=\dimen141
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -717,14 +724,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 51.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count127
 )
 LaTeX Info: Redefining \ref on input line 51.
 LaTeX Info: Redefining \pageref on input line 51.
@@ -813,35 +820,91 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
  [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] <../figs/embeddings_visualisation.png, id=90, 381.425pt x 252.945pt>
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../figs/mnist_cum_stds.png, id=122, 414.8298pt x 317.988pt>
+File: ../figs/mnist_cum_stds.png Graphic file (type png)
+ <use ../figs/mnist_cum_stds.png>
+Package pdftex.def Info: ../figs/mnist_cum_stds.png used on input line 196.
+(pdftex.def)             Requested size: 207.41438pt x 158.9936pt.
+ [4]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\NAT@ctype' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\let' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\let' on input line 201.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\new@ifnextchar' on input line 201.
+
+<../figs/noisy_mnist_cum_stds.png, id=132, 862.9038pt x 343.2825pt>
+File: ../figs/noisy_mnist_cum_stds.png Graphic file (type png)
+ <use ../figs/noisy_mnist_cum_stds.png>
+Package pdftex.def Info: ../figs/noisy_mnist_cum_stds.png used on input line 225.
+(pdftex.def)             Requested size: 345.1554pt x 137.31056pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../figs/mnist_cum_stds.png>] <../figs/incorrect_mnist.png, id=143, 364.9635pt x 286.1892pt>
+File: ../figs/incorrect_mnist.png Graphic file (type png)
+ <use ../figs/incorrect_mnist.png>
+Package pdftex.def Info: ../figs/incorrect_mnist.png used on input line 246.
+(pdftex.def)             Requested size: 218.97978pt x 171.71483pt.
+ <../figs/embeddings_visualisation.png, id=144, 381.425pt x 252.945pt>
 File: ../figs/embeddings_visualisation.png Graphic file (type png)
  <use ../figs/embeddings_visualisation.png>
-Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 173.
-(pdftex.def)             Requested size: 381.42406pt x 252.94438pt.
- [3] (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
- [4 <../figs/embeddings_visualisation.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
+Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 257.
+(pdftex.def)             Requested size: 190.71202pt x 126.47218pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl [6 <../figs/noisy_mnist_cum_stds.png> <../figs/incorrect_mnist.png>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+ [7 <../figs/embeddings_visualisation.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
- 8970 strings out of 493014
- 134719 string characters out of 6133350
- 260966 words of memory out of 5000000
- 12248 multiletter control sequences out of 15000+600000
- 37345 words of font info for 105 fonts, out of 8000000 for 9000
+ 9112 strings out of 493014
+ 136865 string characters out of 6133350
+ 264676 words of memory out of 5000000
+ 12331 multiletter control sequences out of 15000+600000
+ 38905 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,12n,38p,1228b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,12n,38p,1432b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (4 pages, 206172 bytes).
+Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (7 pages, 322521 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 21118 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 222 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 21173 words of extra memory for PDF output out of 24883 (max. 10000000)
 

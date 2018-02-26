@@ -91,7 +91,7 @@ with tf.Session() as sess:
     num_epochs = 20
     batch_size = 1024
    
-    train_model = True
+    train_model = False
 
     checkpoint_path = "models/tf_reject_cnn.ckpt"
 
@@ -165,6 +165,22 @@ with tf.Session() as sess:
 
     print("Test acc: {}".format(acc))
 
-    rejected_imgs = np.argwhere(np.argmax(probabilities_, axis=-1) < reject_ps_)
+    highest_probs = np.argmax(probabilities_, axis=-1)
 
+    correct_imgs = np.argwhere(predictions_ == y_test)
+    incorrect_imgs = np.argwhere(predictions_ != y_test)
+    rejected_imgs = np.argwhere(highest_probs < reject_ps_)
+
+    print("Num correct: {}".format(len(correct_imgs)))
+    print("Num incorrect: {}".format(len(incorrect_imgs)))
     print("Num rejected: {}".format(len(rejected_imgs)))
+
+    incorrect_reject_imgs =  np.argwhere((predictions_ != y_test) & (highest_probs < reject_ps_))
+    incorrect_accept_imgs =  np.argwhere((predictions_ != y_test) & (highest_probs >= reject_ps_))
+    correct_reject_imgs =  np.argwhere((predictions_ == y_test) & (highest_probs < reject_ps_))
+    correct_accept_imgs =  np.argwhere((predictions_ == y_test) & (highest_probs >= reject_ps_))
+
+    print("Num incorrect and reject: {}".format(len(incorrect_reject_imgs)))
+    print("Num incorrect and accept: {}".format(len(incorrect_accept_imgs)))
+    print("Num correct and reject: {}".format(len(correct_reject_imgs)))
+    print("Num correct and accept: {}".format(len(correct_accept_imgs)))

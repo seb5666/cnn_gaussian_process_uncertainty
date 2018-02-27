@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  27 FEB 2018 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  27 FEB 2018 14:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -832,90 +832,91 @@ LaTeX Font Info:    Try loading font information for U+bbm on input line 175.
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 182.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 183.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 183.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
-
-
-LaTeX Warning: Command \textregistered invalid in math mode on input line 182.
-
-
-LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
-
-
-LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 183.
 
 [4] <../figs/mnist_cum_stds.png, id=131, 414.8298pt x 317.988pt>
 File: ../figs/mnist_cum_stds.png Graphic file (type png)
  <use ../figs/mnist_cum_stds.png>
-Package pdftex.def Info: ../figs/mnist_cum_stds.png used on input line 214.
+Package pdftex.def Info: ../figs/mnist_cum_stds.png used on input line 215.
 (pdftex.def)             Requested size: 207.41438pt x 158.9936pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figs/noisy_mnist_example.png, id=135, 748.7975pt x 248.93pt>
+[5] <../figs/noisy_mnist_example.png, id=142, 748.7975pt x 248.93pt>
 File: ../figs/noisy_mnist_example.png Graphic file (type png)
  <use ../figs/noisy_mnist_example.png>
-Package pdftex.def Info: ../figs/noisy_mnist_example.png used on input line 224.
-(pdftex.def)             Requested size: 224.64098pt x 74.67957pt.
- [5] [6 <../figs/mnist_cum_stds.png> <../figs/noisy_mnist_example.png>] <../figs/noisy_mnist_cum_stds.png, id=154, 862.9038pt x 343.2825pt>
+Package pdftex.def Info: ../figs/noisy_mnist_example.png used on input line 225.
+(pdftex.def)             Requested size: 149.75684pt x 49.78511pt.
+ <../figs/noisy_mnist_cum_stds.png, id=145, 897.3525pt x 283.0575pt>
 File: ../figs/noisy_mnist_cum_stds.png Graphic file (type png)
  <use ../figs/noisy_mnist_cum_stds.png>
-Package pdftex.def Info: ../figs/noisy_mnist_cum_stds.png used on input line 250.
-(pdftex.def)             Requested size: 345.1554pt x 137.31056pt.
- <../figs/awgn_predictions.png, id=155, 1160.335pt x 252.945pt>
+Package pdftex.def Info: ../figs/noisy_mnist_cum_stds.png used on input line 251.
+(pdftex.def)             Requested size: 358.93463pt x 113.22098pt.
+ [6 <../figs/mnist_cum_stds.png> <../figs/noisy_mnist_example.png>] <../figs/r_accs_alpha_mnist.png, id=157, 400.49625pt x 270.00874pt>
+File: ../figs/r_accs_alpha_mnist.png Graphic file (type png)
+ <use ../figs/r_accs_alpha_mnist.png>
+Package pdftex.def Info: ../figs/r_accs_alpha_mnist.png used on input line 262.
+(pdftex.def)             Requested size: 192.23601pt x 129.6027pt.
+ <../figs/r_acc_mnist.png, id=158, 396.48125pt x 270.00874pt>
+File: ../figs/r_acc_mnist.png Graphic file (type png)
+ <use ../figs/r_acc_mnist.png>
+Package pdftex.def Info: ../figs/r_acc_mnist.png used on input line 263.
+(pdftex.def)             Requested size: 190.30882pt x 129.6027pt.
+ <../figs/awgn_predictions.png, id=162, 1160.335pt x 252.945pt>
 File: ../figs/awgn_predictions.png Graphic file (type png)
  <use ../figs/awgn_predictions.png>
-Package pdftex.def Info: ../figs/awgn_predictions.png used on input line 261.
+Package pdftex.def Info: ../figs/awgn_predictions.png used on input line 277.
 (pdftex.def)             Requested size: 397.48499pt x 86.64857pt.
- <../figs/awgn_predictions_stds.png, id=156, 376.40625pt x 252.945pt>
+ <../figs/awgn_predictions_stds.png, id=164, 376.40625pt x 252.945pt>
 File: ../figs/awgn_predictions_stds.png Graphic file (type png)
  <use ../figs/awgn_predictions_stds.png>
-Package pdftex.def Info: ../figs/awgn_predictions_stds.png used on input line 262.
+Package pdftex.def Info: ../figs/awgn_predictions_stds.png used on input line 284.
 (pdftex.def)             Requested size: 150.55983pt x 101.17621pt.
- <../figs/incorrect_mnist.png, id=157, 364.9635pt x 286.1892pt>
-File: ../figs/incorrect_mnist.png Graphic file (type png)
- <use ../figs/incorrect_mnist.png>
-Package pdftex.def Info: ../figs/incorrect_mnist.png used on input line 277.
-(pdftex.def)             Requested size: 218.97978pt x 171.71483pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <../figs/noisy_mnist_cum_stds.png> <../figs/awgn_predictions.png> <../figs/awgn_predictions_stds.png>] <../figs/embeddings_visualisation.png, id=168, 381.425pt x 252.945pt>
+ [7 <../figs/noisy_mnist_cum_stds.png> <../figs/r_accs_alpha_mnist.png> <../figs/r_acc_mnist.png>] <../figs/embeddings_visualisation.png, id=179, 381.425pt x 252.945pt>
 File: ../figs/embeddings_visualisation.png Graphic file (type png)
  <use ../figs/embeddings_visualisation.png>
-Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 288.
+Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 294.
 (pdftex.def)             Requested size: 190.71202pt x 126.47218pt.
- (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
- [8 <../figs/incorrect_mnist.png> <../figs/embeddings_visualisation.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
+ (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl [8 <../figs/awgn_predictions.png> <../figs/awgn_predictions_stds.png> <../figs/embeddings_visualisation.png>]) [9] <../figs/incorrect_mnist.png, id=197, 364.9635pt x 286.1892pt>
+File: ../figs/incorrect_mnist.png Graphic file (type png)
+ <use ../figs/incorrect_mnist.png>
+Package pdftex.def Info: ../figs/incorrect_mnist.png used on input line 310.
+(pdftex.def)             Requested size: 401.46107pt x 314.80907pt.
+
+Overfull \hbox (3.97609pt too wide) in paragraph at lines 310--311
+ [][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
+[10 <../figs/incorrect_mnist.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 298.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
- 9197 strings out of 493014
- 138681 string characters out of 6133350
- 264140 words of memory out of 5000000
- 12383 multiletter control sequences out of 15000+600000
- 39950 words of font info for 142 fonts, out of 8000000 for 9000
+ 9226 strings out of 493014
+ 139279 string characters out of 6133350
+ 266525 words of memory out of 5000000
+ 12399 multiletter control sequences out of 15000+600000
+ 40305 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,12n,38p,1505b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,12n,38p,1505b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/sebastian/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk>{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (8 pages, 380588 bytes).
+Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (10 pages, 394948 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 21188 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 21198 words of extra memory for PDF output out of 24883 (max. 10000000)
 

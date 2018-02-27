@@ -37,6 +37,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Evaluation}{4}{subsection.2.3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Accuracy}{4}{subsubsection.2.3.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Reject option}{4}{subsubsection.2.3.2}}
+\newlabel{section/reject_option}{{2.3.2}{4}{Reject option}{subsubsection.2.3.2}{}}
 \citation{DBLP:journals/corr/BasuKGDMN15}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{5}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}MNIST dataset}{5}{subsection.3.1}}
@@ -45,28 +46,36 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Noisy MNIST (n-MNIST)}{5}{subsection.3.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images.}}{6}{figure.1}}
 \newlabel{fig/mnist_cum_stds}{{1}{6}{Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example digits from the noisy-MNIST dataset. From left to right: Additive white Guassian noise, Motion blur, and Reduced contrast with AWGN}}{6}{figure.2}}
-\newlabel{fig/noisy_mnist_example}{{2}{6}{Example digits from the noisy-MNIST dataset. From left to right: Additive white Guassian noise, Motion blur, and Reduced contrast with AWGN}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example digits from the noisy-MNIST dataset. From left to right: Additive white Gaussian noise, Motion blur, and Reduced contrast with AWGN}}{6}{figure.2}}
+\newlabel{fig/noisy_mnist_example}{{2}{6}{Example digits from the noisy-MNIST dataset. From left to right: Additive white Gaussian noise, Motion blur, and Reduced contrast with AWGN}{figure.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces MNIST test images accuracy for the CNN and the GP.}}{6}{table.2}}
 \newlabel{table/noisy_mnist_acc}{{2}{6}{MNIST test images accuracy for the CNN and the GP}{table.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images.}}{7}{figure.3}}
 \newlabel{fig/noisy_mnist_cum_stds}{{3}{7}{Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images}{figure.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Classifying with a reject option}{7}{subsection.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Uncertainty with additive white noise}{7}{subsection.3.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images.}}{7}{figure.4}}
-\newlabel{fig/awgn_predictions}{{4}{7}{Cumulative distribution of standard deviations for correctly and incorrectly classified test images. The standard deviation of the most likely class is taken for both correctly and incorrectly classified images}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Uncertainty with rotated images}{7}{subsection.3.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Right: R-accuracy obtained using varying $\epsilon $ and $\alpha $ but setting $\beta =0$. For $\alpha >0$ there seems to be an optimal value of $\epsilon $ around 30. Left: Number of examples misclassified or rejected. This illustrates the trade-off between the number of misclassified but accepted and correctly classified but rejected examples.}}{7}{figure.4}}
+\newlabel{fig/r_accs_alpha_mnist}{{4}{7}{Right: R-accuracy obtained using varying $\epsilon $ and $\alpha $ but setting $\beta =0$. For $\alpha >0$ there seems to be an optimal value of $\epsilon $ around 30. Left: Number of examples misclassified or rejected. This illustrates the trade-off between the number of misclassified but accepted and correctly classified but rejected examples}{figure.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{7}{section.4}}
+\citation{maaten2008visualizing}
 \bibdata{bib}
 \bibcite{DBLP:journals/corr/GuWKMSSLWW15}{{1}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Uncertainty with additive white noise}{8}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Top: Test images with increasingly more additive white Gaussian noise. Bottom: Gausssian process predictions for the test images. The error bars show the standard error for each class.}}{8}{figure.5}}
+\newlabel{fig/awgn_predictions}{{5}{8}{Top: Test images with increasingly more additive white Gaussian noise. Bottom: Gausssian process predictions for the test images. The error bars show the standard error for each class}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Probability and standard deviation assigned to class `6' for the 10 images shown in figure \ref  {fig/awgn_predictions}. Also plotted is the standard deviation relative to the class proability.}}{8}{figure.6}}
+\newlabel{fig/awgn_predictions_stds}{{6}{8}{Probability and standard deviation assigned to class `6' for the 10 images shown in figure \ref {fig/awgn_predictions}. Also plotted is the standard deviation relative to the class proability}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}CNN features visualisation}{8}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Test point embedding using t-SNE}}{8}{figure.7}}
 \bibcite{adam}{{2}{}{{}}{{}}}
 \bibcite{villacampa2017scalable}{{3}{}{{}}{{}}}
 \bibcite{hensman2015scalable}{{4}{}{{}}{{}}}
 \bibcite{GPflow2017}{{5}{}{{}}{{}}}
 \bibcite{chow1970optimum}{{6}{}{{}}{{}}}
 \bibcite{DBLP:journals/corr/BasuKGDMN15}{{7}{}{{}}{{}}}
+\bibcite{maaten2008visualizing}{{8}{}{{}}{{}}}
 \bibstyle{unsrt}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Test images misclassified images by the GP model.}}{8}{figure.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}CNN features visualisation}{8}{subsection.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Test point embedding using t-SNE}}{8}{figure.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Misclassified MNIST images by the Gaussian process model}{10}{appendix.A}}
+\newlabel{appendix/mnist_error}{{A}{10}{Misclassified MNIST images by the Gaussian process model}{appendix.A}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Test images misclassified images by the GP model.}}{10}{figure.8}}
+\newlabel{fig/incorrect_mnist}{{8}{10}{Test images misclassified images by the GP model}{figure.8}{}}

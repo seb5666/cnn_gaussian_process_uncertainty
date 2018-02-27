@@ -39,4 +39,9 @@ Saikat Basu, Manohar Karki, Sangram Ganguly, Robert DiBiano, Supratik
   and deep belief nets.
 \newblock {\em CoRR}, abs/1509.03413, 2015.
 
+\bibitem{maaten2008visualizing}
+Laurens van~der Maaten and Geoffrey Hinton.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of machine learning research}, 9(Nov):2579--2605, 2008.
+
 \end{thebibliography}

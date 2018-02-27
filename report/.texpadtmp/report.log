@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  26 FEB 2018 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  27 FEB 2018 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -115,6 +115,12 @@ Package: bm 2016/02/27 v1.2a Bold Symbol Support (DPC/FMi)
 \symboldsymbols=\mathgroup6
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
 LaTeX Info: Redefining \bm on input line 208.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 ) (./report.sty
 
 LaTeX Warning: You have requested package `report',
@@ -617,21 +623,21 @@ File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
 )) (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 52.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -725,7 +731,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 52.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -733,14 +739,14 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.out) (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 52.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -754,25 +760,25 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 55.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 56.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -781,130 +787,135 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 75.
+(hyperref)                removing `\begingroup' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 75.
+(hyperref)                removing `\<let>-command' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 75.
+(hyperref)                removing `\NAT@ctype' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 75.
+(hyperref)                removing `\z@' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 75.
+(hyperref)                removing `\let' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 75.
+(hyperref)                removing `\let' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 75.
+(hyperref)                removing `\new@ifnextchar' on input line 76.
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 79.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
  [1
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 175.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 182.
 
-<../figs/mnist_cum_stds.png, id=122, 414.8298pt x 317.988pt>
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 182.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 182.
+
+[4] <../figs/mnist_cum_stds.png, id=131, 414.8298pt x 317.988pt>
 File: ../figs/mnist_cum_stds.png Graphic file (type png)
  <use ../figs/mnist_cum_stds.png>
-Package pdftex.def Info: ../figs/mnist_cum_stds.png used on input line 196.
+Package pdftex.def Info: ../figs/mnist_cum_stds.png used on input line 214.
 (pdftex.def)             Requested size: 207.41438pt x 158.9936pt.
- [4]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 201.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 201.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 201.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 201.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 201.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 201.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 201.
-
-<../figs/noisy_mnist_cum_stds.png, id=132, 862.9038pt x 343.2825pt>
+<../figs/noisy_mnist_example.png, id=135, 748.7975pt x 248.93pt>
+File: ../figs/noisy_mnist_example.png Graphic file (type png)
+ <use ../figs/noisy_mnist_example.png>
+Package pdftex.def Info: ../figs/noisy_mnist_example.png used on input line 224.
+(pdftex.def)             Requested size: 224.64098pt x 74.67957pt.
+ [5] [6 <../figs/mnist_cum_stds.png> <../figs/noisy_mnist_example.png>] <../figs/noisy_mnist_cum_stds.png, id=154, 862.9038pt x 343.2825pt>
 File: ../figs/noisy_mnist_cum_stds.png Graphic file (type png)
  <use ../figs/noisy_mnist_cum_stds.png>
-Package pdftex.def Info: ../figs/noisy_mnist_cum_stds.png used on input line 225.
+Package pdftex.def Info: ../figs/noisy_mnist_cum_stds.png used on input line 250.
 (pdftex.def)             Requested size: 345.1554pt x 137.31056pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <../figs/mnist_cum_stds.png>] <../figs/incorrect_mnist.png, id=143, 364.9635pt x 286.1892pt>
+ <../figs/awgn_predictions.png, id=155, 1160.335pt x 252.945pt>
+File: ../figs/awgn_predictions.png Graphic file (type png)
+ <use ../figs/awgn_predictions.png>
+Package pdftex.def Info: ../figs/awgn_predictions.png used on input line 261.
+(pdftex.def)             Requested size: 397.48499pt x 86.64857pt.
+ <../figs/awgn_predictions_stds.png, id=156, 376.40625pt x 252.945pt>
+File: ../figs/awgn_predictions_stds.png Graphic file (type png)
+ <use ../figs/awgn_predictions_stds.png>
+Package pdftex.def Info: ../figs/awgn_predictions_stds.png used on input line 262.
+(pdftex.def)             Requested size: 150.55983pt x 101.17621pt.
+ <../figs/incorrect_mnist.png, id=157, 364.9635pt x 286.1892pt>
 File: ../figs/incorrect_mnist.png Graphic file (type png)
  <use ../figs/incorrect_mnist.png>
-Package pdftex.def Info: ../figs/incorrect_mnist.png used on input line 246.
+Package pdftex.def Info: ../figs/incorrect_mnist.png used on input line 277.
 (pdftex.def)             Requested size: 218.97978pt x 171.71483pt.
- <../figs/embeddings_visualisation.png, id=144, 381.425pt x 252.945pt>
-File: ../figs/embeddings_visualisation.png Graphic file (type png)
- <use ../figs/embeddings_visualisation.png>
-Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 257.
-(pdftex.def)             Requested size: 190.71202pt x 126.47218pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl [6 <../figs/noisy_mnist_cum_stds.png> <../figs/incorrect_mnist.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
- [7 <../figs/embeddings_visualisation.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
+[7 <../figs/noisy_mnist_cum_stds.png> <../figs/awgn_predictions.png> <../figs/awgn_predictions_stds.png>] <../figs/embeddings_visualisation.png, id=168, 381.425pt x 252.945pt>
+File: ../figs/embeddings_visualisation.png Graphic file (type png)
+ <use ../figs/embeddings_visualisation.png>
+Package pdftex.def Info: ../figs/embeddings_visualisation.png used on input line 288.
+(pdftex.def)             Requested size: 190.71202pt x 126.47218pt.
+ (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+ [8 <../figs/incorrect_mnist.png> <../figs/embeddings_visualisation.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
  (/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
  ) 
 Here is how much of TeX's memory you used:
- 9112 strings out of 493014
- 136865 string characters out of 6133350
- 264676 words of memory out of 5000000
- 12331 multiletter control sequences out of 15000+600000
- 38905 words of font info for 129 fonts, out of 8000000 for 9000
+ 9197 strings out of 493014
+ 138681 string characters out of 6133350
+ 264140 words of memory out of 5000000
+ 12383 multiletter control sequences out of 15000+600000
+ 39950 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,12n,38p,1432b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (7 pages, 322521 bytes).
+ 31i,12n,38p,1505b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/sebastian/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk>{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (8 pages, 380588 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 21173 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 21188 words of extra memory for PDF output out of 24883 (max. 10000000)
 

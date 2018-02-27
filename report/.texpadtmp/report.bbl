@@ -27,6 +27,11 @@ Alexander G. de~G. Matthews, Mark {van der Wilk}, Tom Nickson, Keisuke. Fujii,
   Alexis {Boukouvalas}, Pablo {Le{‘o}n-Villagr{‘a}}, Zoubin Ghahramani, and
   James Hensman.
 
+\bibitem{chow1970optimum}
+C~Chow.
+\newblock On optimum recognition error and reject tradeoff.
+\newblock {\em IEEE Transactions on information theory}, 16(1):41--46, 1970.
+
 \bibitem{DBLP:journals/corr/BasuKGDMN15}
 Saikat Basu, Manohar Karki, Sangram Ganguly, Robert DiBiano, Supratik
   Mukhopadhyay, and Ramakrishna~R. Nemani.

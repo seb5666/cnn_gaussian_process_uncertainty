@@ -7,14 +7,14 @@
 \BOOKMARK [1][-]{section.2}{Method}{}% 7
 \BOOKMARK [2][-]{subsection.2.1}{Convolutional Neural Network architecture}{section.2}% 8
 \BOOKMARK [2][-]{subsection.2.2}{Gaussian process}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Metrics}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Evaluation}{section.2}% 10
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Accuracy}{subsection.2.3}% 11
-\BOOKMARK [3][-]{subsubsection.2.3.2}{0-d-1 loss?}{subsection.2.3}% 12
-\BOOKMARK [3][-]{subsubsection.2.3.3}{With reject cost}{subsection.2.3}% 13
-\BOOKMARK [1][-]{section.3}{Results}{}% 14
-\BOOKMARK [2][-]{subsection.3.1}{MNIST dataset}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.2}{Noisy MNIST \(n-MNIST\) DBLP:journals/corr/BasuKGDMN15}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.3}{Uncertainty with additive white noise}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.4}{Uncertainty with rotated images}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Reject option}{subsection.2.3}% 12
+\BOOKMARK [1][-]{section.3}{Results}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{MNIST dataset}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Noisy MNIST \(n-MNIST\)}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Classifying with a reject option}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.4}{Uncertainty with additive white noise}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.5}{Uncertainty with rotated images}{section.3}% 18
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 19
 \BOOKMARK [2][-]{subsection.4.1}{CNN features visualisation}{section.4}% 20

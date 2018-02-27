@@ -11,45 +11,45 @@ Warning--empty journal in hensman2015scalable
 Warning--empty title in GPflow2017
 Warning--empty journal in GPflow2017
 Warning--empty year in GPflow2017
-You've used 8 entries,
+You've used 15 entries,
             1791 wiz_defined-function locations,
-            489 strings with 5210 characters,
-and the built_in function-call counts, 1595 in all, are:
-= -- 115
-> -- 114
-< -- 0
-+ -- 41
-- -- 33
-* -- 116
-:= -- 292
-add.period$ -- 22
-call.type$ -- 8
-change.case$ -- 7
+            533 strings with 6351 characters,
+and the built_in function-call counts, 3263 in all, are:
+= -- 271
+> -- 184
+< -- 1
++ -- 67
+- -- 52
+* -- 219
+:= -- 549
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 66
-empty$ -- 133
-format.name$ -- 33
-if$ -- 325
+cite$ -- 19
+duplicate$ -- 138
+empty$ -- 297
+format.name$ -- 52
+if$ -- 701
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 8
-newline$ -- 41
-num.names$ -- 8
-pop$ -- 22
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 77
+num.names$ -- 15
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 29
+skip$ -- 66
 stack$ -- 0
-substring$ -- 50
-swap$ -- 6
-text.length$ -- 0
+substring$ -- 177
+swap$ -- 25
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 12
-width$ -- 9
-write$ -- 80
+while$ -- 28
+width$ -- 17
+write$ -- 157
 (There was 1 error message)

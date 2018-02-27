@@ -1,20 +1,22 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Convolutional neural networks DBLP:journals/corr/GuWKMSSLWW15 \(ADD MORE CITATIONS\)}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Gaussian processes}{section.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Regression}{subsection.1.2}% 4
-\BOOKMARK [3][-]{subsubsection.1.2.2}{Classification}{subsection.1.2}% 5
-\BOOKMARK [2][-]{subsection.1.3}{Uncertainty in Deep Learning}{section.1}% 6
-\BOOKMARK [1][-]{section.2}{Method}{}% 7
-\BOOKMARK [2][-]{subsection.2.1}{Convolutional Neural Network architecture}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.2}{Gaussian process}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Evaluation}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Accuracy}{subsection.2.3}% 11
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Reject option}{subsection.2.3}% 12
-\BOOKMARK [1][-]{section.3}{Results}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{MNIST dataset}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.2}{Noisy MNIST \(n-MNIST\)}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Classifying with a reject option}{section.3}% 16
-\BOOKMARK [1][-]{section.4}{Discussion}{}% 17
-\BOOKMARK [2][-]{subsection.4.1}{Uncertainty with additive white noise}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.2}{CNN features visualisation}{section.4}% 19
-\BOOKMARK [1][-]{appendix.A}{Misclassified MNIST images by the Gaussian process model}{}% 20
+\BOOKMARK [1][-]{section.2}{Background}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Convolutional neural networks}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Gaussian processes}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Regression}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Classification}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Uncertainty in Deep Learning}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Method}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Convolutional Neural Network architecture}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Gaussian process}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Classifying with a reject option}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{Evaluation}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Accuracy}{subsection.3.4}% 13
+\BOOKMARK [3][-]{subsubsection.3.4.2}{R-accuracy}{subsection.3.4}% 14
+\BOOKMARK [1][-]{section.4}{Results}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{MNIST dataset}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Noisy MNIST \(n-MNIST\)}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{Classifying with a reject option}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 19
+\BOOKMARK [2][-]{subsection.5.1}{Uncertainty with additive white noise}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.2}{CNN features visualisation}{section.5}% 21
+\BOOKMARK [1][-]{appendix.A}{Misclassified MNIST images by the Gaussian process model}{}% 22

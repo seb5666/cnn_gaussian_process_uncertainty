@@ -1,4 +1,27 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Gal2016Uncertainty}
+Yarin Gal.
+\newblock {\em Uncertainty in Deep Learning}.
+\newblock PhD thesis, University of Cambridge, 2016.
+
+\bibitem{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{gal2016dropout}
+Yarin Gal and Zoubin Ghahramani.
+\newblock Dropout as a bayesian approximation: Representing model uncertainty
+  in deep learning.
+\newblock In {\em international conference on machine learning}, pages
+  1050--1059, 2016.
+
+\bibitem{lecun1998gradient}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
 
 \bibitem{DBLP:journals/corr/GuWKMSSLWW15}
 Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
@@ -17,6 +40,18 @@ Carlos Villacampa-Calvo and Daniel Hern{\'a}ndez-Lobato.
   expectation propagation.
 \newblock {\em arXiv preprint arXiv:1706.07258}, 2017.
 
+\bibitem{chollet2015keras}
+Fran\c{c}ois Chollet et~al.
+\newblock Keras.
+\newblock \url{https://github.com/keras-team/keras}, 2015.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
+  2014.
+
 \bibitem{hensman2015scalable}
 James Hensman, Alexander G de~G Matthews, and Zoubin Ghahramani.
 \newblock Scalable variational gaussian process classification.
@@ -26,6 +61,11 @@ James Hensman, Alexander G de~G Matthews, and Zoubin Ghahramani.
 Alexander G. de~G. Matthews, Mark {van der Wilk}, Tom Nickson, Keisuke. Fujii,
   Alexis {Boukouvalas}, Pablo {Le{‘o}n-Villagr{‘a}}, Zoubin Ghahramani, and
   James Hensman.
+
+\bibitem{rasmussen2006gaussian}
+Carl~Edward Rasmussen and Christopher~KI Williams.
+\newblock Gaussian processes for machine learning. 2006.
+\newblock {\em The MIT Press, Cambridge, MA, USA}, 38:715--719, 2006.
 
 \bibitem{chow1970optimum}
 C~Chow.

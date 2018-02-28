@@ -85,16 +85,16 @@ The learning process for convolutional neural network is identical to the learni
 \subsection{Gaussian processes}
 Formally, a Gaussian Process is defined as a collection of random variables, any finite number of which have (consistent) joint Gaussian distributions. A Gaussian process therefore defines a distribution over functions and is fully specified by a mean function $m(x)$ and a covariance function $k(x, x')$. Write $f \sim \mathcal{GP}(m, k)$ meaning $f$ is distributed as a GP with mean $m$ and covariance $k$.
 
-Using the GP we can draw samples from the function for any finite number $n$ of locations. Given locations $\mathbf{x} = [x_1, \dots, x_n]$, first compute $\mu_i = m(x_i)$, $\Sigma_{i,j} = k(x_i, x_j)$. We can then sample a vector from this distribution: $\mathbf{f} \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$.
+Given a finite number $n$ of locations $\mathbf{x} = [x_1, \dots, x_n]$ it is possible to sample from the GP at those locations. First compute $\mu_i = m(x_i)$, $\Sigma_{i,j} = k(x_i, x_j)$ and then sample a vector from the distribution $\mathbf{f} \sim \mathcal{N}(\bm{\mu}, \mathbf{\Sigma})$.
 
 \subsubsection{Regression}
-We can now use this GP as a prior for Bayesian inference. Let $\mathbf{f}$ be the known function values for the training examples an let $\mathbf{f}_*$ be the set of function values corresponding to the set of test inputs $X_*$. The joint distribution is given by
+Regression tasks can be solved by performing Bayesian inference with a GP as a prior. Let $\mathbf{f}$ be the known function values for the training examples an let $\mathbf{f}_*$ be the set of function values corresponding to the set of test inputs $X_*$. The joint distribution is given by
 \begin{equation*}
 \begin{bmatrix} \mathbf{f} \\ \mathbf{f}_* \end{bmatrix} 
 = 
 \mathcal{N}\Big(\begin{bmatrix} \bm{\mu} \\ \bm{\mu}_* \end{bmatrix}, \begin{bmatrix}\bm{\Sigma} & \bm{\Sigma}_* \\ \bm{\Sigma}_*^T & \bm{\Sigma}_{**} \end{bmatrix} \Big)
 \end{equation*}
-where $\bm{\mu}_*$ are the test means, $\bm{\Sigma}_*$ are the training-test covariances, and $\bm{\Sigma}_{**}$ are the test-test covariances. Since we know the training values $\mathbf{f}$, we are interested in the conditional distribution of $\mathbf{f}_*$ given $\mathbf{f}$:
+where $\bm{\mu}_*$ are the test means, $\bm{\Sigma}_*$ are the training-test covariances, and $\bm{\Sigma}_{**}$ are the test-test covariances. Using the known training values $\mathbf{f}$, the conditional distribution of $\mathbf{f}_*$ given $\mathbf{f}$ is given by
 \begin{equation*}
 	\mathbf{f} \big\vert \mathbf{f}_* \sim
 	\mathcal{N} \big( \bm{\mu}_* + \mathbf{\Sigma}_*^T \mathbf{\Sigma}^{-1}(\mathbf{f}-\bm{\mu}), \mathbf{\Sigma}_{**} - \mathbf{\Sigma}^T_*\mathbf{\Sigma}^{-1}\mathbf{\Sigma}_* \big)
@@ -110,7 +110,7 @@ where $\Sigma(X, x)$ is a vector of covariances between every training case in $
 \end{equation*}
 where $\delta_{ii'} = 1$ iff $i=i'$ is the Kronecker's delta.
 
-The mean function $m(x)$ and the covariance function $k(x,x')$ are typically parametrised in terms of hyper-parameters $\bm{\theta}$. During training we find the values of the hyper-parameters which optimise the marginal likelihood:
+The mean function $m(x)$ and the covariance function $k(x,x')$ are typically parametrised in terms of hyper-parameters $\bm{\theta}$. During training the values of the hyper-parameters are found by optimising the marginal likelihood:
 \begin{equation*}
 	L = \log p(\bm{y}\vert\bm{x},\bm{\theta}) = -\frac{1}{2}\vert\Sigma\vert - \frac{1}{2}(\bm{y}-\bm{\mu})^T\Sigma^{-1}(\bm{y}-\bm{\mu}) - \frac{n}{2}\log(2\pi)
 \end{equation*}
@@ -128,8 +128,7 @@ Second, a probabilistic prediction is computed using the distribution computed i
 \begin{equation*}
 	\bar{\pi}_* = p(y_* = +1 |\mathbf{X}, \mathbf{y}, \mathbf{x}_*) = \int \sigma(f_*) p(f_*  \vert \mathbf{X}, \mathbf{y}, \mathbf{x}_*) df_*
 \end{equation*}
-As the likelihood is non longer Gaussian, the first integral becomes analytically intractable. Similarly, depending on the sigmoid function, the second integral can also be intractable. Hence, we need to use approximations, either analytical or numerical, for example using Monte Carlo sampling, to solve the integrals.
-
+As the likelihood is non longer Gaussian, the first integral becomes analytically intractable. Similarly, depending on the sigmoid function, the second integral can also be intractable. Hence, analytical or numerical approximations need to be made to solve the integral, for example using Monte Carlo sampling.
 
 \paragraph{Multi-class classification} is typically \cite{villacampa2017scalable} approached by assuming the following labelling rule for $y_*$ given $\mathbf{x}_*$:
 \begin{equation*}
@@ -157,7 +156,7 @@ I train the Gaussian process with a simple kernel as it is sufficient to obtain 
 \label{section/reject_option}
 One way to incorporate the model uncertainty is by allowing the model to say ``I don't know''. For example, if the model was presented with an image of the letter `a', it would still classify the image into one of the 10 digits, which might not be a desired outcome. Instead, the model should be able to reject classification for the inputs in which the uncertainty is too high. This is known as \textbf{classification with a reject option} \cite{chow1970optimum}. 
 
-Given uncertainty bounds with each class probability, we can design the model to reject classification according to certain rejection rules. We could decided to reject if the standard deviation of the highest probability is above a pre-defined threshold. Another rejection rule could be to reject if the second highest class probability lies within a certain factor $\epsilon$ of the standard deviations of the highest probability, i.e.\ the model would reject if
+Given uncertainty bounds with each class probability, the model can be augmented to reject classification according to certain rejection rules. The model could reject if the standard deviation of the highest probability is above a pre-defined threshold. Another rejection rule could be to reject if the second highest class probability lies within a certain factor $\epsilon$ of the standard deviations of the highest probability, i.e.\ the model would reject if
 \begin{equation*}
 	\vert f_p(\mathbf{x}^{(i)})_1 - f_p(\mathbf{x}^{(i)})_2 \vert < \epsilon f_{\textrm{std}}(\mathbf{x}^{(i)})_1
 \end{equation*}
@@ -233,7 +232,7 @@ GP & $93.34\%$  & $92.09\%$ & $70.13\%$ \\
 \label{table/noisy_mnist_acc}
 \end{table}
 
-We can again inspect how uncertain the model is when classifying the noisy dataset by plotting the cumulative distributions of the standard deviations of the most likely digit. Figure \ref{fig/noisy_mnist_cum_stds} shows the resulting plots for each dataset, which indeed suggest that the uncertainty increases as the model is asked to classify images that are increasingly different from those it was trained on. The uncertainty for the additive white Gaussian noise dataset is higher than the uncertainty for the MNIST test dataset. This is shown by the fact that the cumulative distribution for the correctly classified images in the AWGN images is lower. Similarly, the cumulative distribution further decreases for the motion blur and reduced contrast images, with a lower classification accuracy corresponding to a higher uncertainty.
+I again inspect how uncertain the model is when classifying the noisy dataset is by plotting the cumulative distributions of the standard deviations of the most likely digit. Figure \ref{fig/noisy_mnist_cum_stds} shows the resulting plots for each dataset, which indeed suggest that the uncertainty increases as the model is asked to classify images that are increasingly different from those it was trained on. The uncertainty for the additive white Gaussian noise dataset is higher than the uncertainty for the MNIST test dataset. This is shown by the fact that the cumulative distribution for the correctly classified images in the AWGN images is lower. Similarly, the cumulative distribution further decreases for the motion blur and reduced contrast images, with a lower classification accuracy corresponding to a higher uncertainty.
 
 \begin{figure}
 	\centering
@@ -279,13 +278,13 @@ Finally, I show the features learned by the CNN by reducing the number of dimens
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{embeddings_visualisation.png}
-	\includegraphics[scale=0.48]{noisy_embeddings_visualisation}
+	\includegraphics[scale=0.38]{embeddings_visualisation.png}
+	\includegraphics[scale=0.38]{noisy_embeddings_visualisation}
 	\caption{Learned features for the MNIST test dataset and the AWGN n-MNIST test dataset. The dimensionality of the features were reduced using t-SNE.}
 \end{figure}
 
 \section{Conclusion}
-In this project, I focused on obtaining uncertainty bounds for the MNIST and n-MNIST dataset by combining a CNN with a Gaussian process and analysed these uncertainty bounds. I showed that the uncertainty bounds given by the GP increase when presented with input data coming from a different underlying distribution than the training data. I also presented a way to add a reject option to the model by using the uncertainty bounds and letting the model reject classification for the example for which it is too uncertain. I evaluated this model using a custom metric, the R-accuracy and showed how different hyper-parameters of the metric and model affect the results. Finally, I inspected how the uncertainty bounds increase when the model is presented with increasingly more perturbed images.
+In this project, I focused on obtaining uncertainty bounds by combining a CNN with a Gaussian process and analysed these uncertainty bounds. I showed that the uncertainty bounds increase when presented with input data coming from a different underlying distribution than the training data. I also presented a way to add a reject option to the model by using the uncertainty bounds and letting the model reject classification for the example for which it is too uncertain. I evaluated this model using a custom metric, the R-accuracy and showed how different hyper-parameters of the metric and model affect the results. Finally, I inspected how the uncertainty bounds increase when the model is presented with increasingly more perturbed images.
 
 \small
 

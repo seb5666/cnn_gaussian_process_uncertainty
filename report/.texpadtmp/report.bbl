@@ -5,18 +5,18 @@ Yarin Gal.
 \newblock {\em Uncertainty in Deep Learning}.
 \newblock PhD thesis, University of Cambridge, 2016.
 
-\bibitem{Goodfellow-et-al-2016}
-Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
-\newblock {\em Deep Learning}.
-\newblock MIT Press, 2016.
-\newblock \url{http://www.deeplearningbook.org}.
-
 \bibitem{gal2016dropout}
 Yarin Gal and Zoubin Ghahramani.
 \newblock Dropout as a bayesian approximation: Representing model uncertainty
   in deep learning.
 \newblock In {\em international conference on machine learning}, pages
   1050--1059, 2016.
+
+\bibitem{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
 
 \bibitem{lecun1998gradient}
 Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.

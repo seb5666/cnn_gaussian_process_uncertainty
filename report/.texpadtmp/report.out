@@ -7,7 +7,7 @@
 \BOOKMARK [2][-]{subsection.2.3}{Uncertainty in Deep Learning}{section.2}% 7
 \BOOKMARK [1][-]{section.3}{Method}{}% 8
 \BOOKMARK [2][-]{subsection.3.1}{Convolutional Neural Network architecture}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Gaussian process}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Training of the Gaussian process}{section.3}% 10
 \BOOKMARK [2][-]{subsection.3.3}{Classifying with a reject option}{section.3}% 11
 \BOOKMARK [2][-]{subsection.3.4}{Evaluation}{section.3}% 12
 \BOOKMARK [3][-]{subsubsection.3.4.1}{Accuracy}{subsection.3.4}% 13
@@ -19,4 +19,5 @@
 \BOOKMARK [1][-]{section.5}{Discussion}{}% 19
 \BOOKMARK [2][-]{subsection.5.1}{Uncertainty with additive white noise}{section.5}% 20
 \BOOKMARK [2][-]{subsection.5.2}{CNN features visualisation}{section.5}% 21
-\BOOKMARK [1][-]{appendix.A}{Misclassified MNIST images by the Gaussian process model}{}% 22
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 22
+\BOOKMARK [1][-]{appendix.A}{Misclassified MNIST images by the Gaussian process model}{}% 23

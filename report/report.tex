@@ -31,7 +31,7 @@
 
 \DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
 
-\title{Gaussian process classifiers for convolutional neural network uncertainty}
+\title{Gaussian process classifiers for CNN uncertainty}
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -45,25 +45,23 @@
 
 \author{
   Sebastian Borgeaud dit Avocat \\
-  \texttt{spb61@cam.ac.uk} \\ \\
-  LE49 - Probabilistic Machine Learning Project \\
-  \small{28 February 2018}
-}
+  LE49 - Probabilistic Machine Learning Project
+  }
 \begin{document}
 %\nipsfinalcopy is no longer used
 
 \maketitle
 
 \begin{abstract}
-  In this report, I show how a Gaussian process can be used in conjunction with a convolutional neural network to obtain prediction uncertainty bounds without decreasing the performance of the model. Furthermore, I inspect how these uncertainty bounds increase when presented with input data coming from a different underlying distribution than the training data. Finally, I show how the uncertainty bounds can be incorporated into the model to give the model the option to reject classifying examples for which it is too uncertain and evaluate this model using a metric that weighs misclassification and classification rejection according to user-defined weights.
+Gaussian processes can be used in conjunction with neural networks to obtain prediction uncertainty bounds without decreasing performance. In this project, I focus on the MNIST dataset and show how uncertainty bounds can be obtained using a CNN. Furthermore, I inspect how these uncertainty bounds increase when presented with input data coming from a different underlying distribution than the training data. Finally, I show how the uncertainty bounds can be incorporated into the model to give the model the option to reject classifying examples for which it is too uncertain and evaluate this model using a metric that weighs misclassification and classification rejection according to user-defined weights.
 \end{abstract}
 
 \section{Introduction}
 Model uncertainty is of crucial importance in many regression and classification tasks such as medical diagnosis, autonomous vehicle steering or high frequency trading \cite{Gal2016Uncertainty}. With model uncertainty it is possible to treat uncertain inputs and special cases explicitly. For example, if model uncertainty is high, a human expert could be asked to decide whether a particular MRI scan shows signs of a tumour or not. Another example showing how model uncertainty could be utilised is when the model is allowed to reject classifying certain examples. In this case the model could reject classification for those examples for which it is too uncertain.
 
-Although deep learning models have become the state-of-the-art in many of those tasks, they do not capture model uncertainty. In classification tasks, the last layer is often passed through a softmax activation which returns a probability distribution over the classes \cite{Goodfellow-et-al-2016}. However, a high probability doesn't mean that the model is certain of its prediction: the model could give a high probability with a high uncertainty in which case the prediction might be worthless \cite{gal2016dropout}.
+Although deep learning models have become the state-of-the-art in many of those tasks, they do not capture model uncertainty \cite{gal2016dropout}. In classification tasks, the last layer is often passed through a softmax activation which returns a probability distribution over the classes \cite{Goodfellow-et-al-2016}. However, a high probability doesn't mean that the model is certain of its prediction: the model could give a high probability with a high uncertainty in which case the prediction might be worthless \cite{gal2016dropout}.
 
-Finding ways to integrate Bayesian uncertainty with deep learning models has become a hot research topic recently. For example, Yarin Gal shows how dropout in neural networks can be used to obtain uncertainty bounds \cite{gal2016dropout}. In this project, I focus on one method to obtain uncertainty bounds for convolutional neural networks: using a Gaussian process on the last-layer features learned by the convolutional neural network. In particular, I focus on the task of classifying hand-written digits using the MNIST dataset \cite{lecun1998gradient}.
+Finding ways to integrate Bayesian uncertainty with deep learning models has become a hot research topic. For example, Yarin Gal shows how dropout in neural networks can be used to obtain uncertainty bounds \cite{gal2016dropout}. In this project, I present one method to obtain uncertainty bounds for convolutional neural networks: using a Gaussian process on the last-layer features learned by the CNN. In particular, I focus on the task of classifying hand-written digits using the MNIST dataset \cite{lecun1998gradient}.
 
 \section{Background}
 \subsection{Convolutional neural networks}
@@ -82,7 +80,7 @@ Convolutional neural networks (CNNs) have become standard in many deep learning 
 	\[ x^{(l+1)}_i = a\Big(\big( \sum_j w_{i,j}^l x^l_j \big) + b^l_i\big)\]
 	where $a(\cdot)$ is a nonlinearity, $w_{i,j}^l$ is the weight connecting neuron $j$ in the $l\textsuperscript{th}$ layer to neuron $i$ in layer $(l+1)\textsuperscript{th}$, and $b_i^l$ is the bias weight for neuron $i$.
 \end{itemize}
-Optimising a convolutional neural network is done in the same way as optimising standard neural networks. A differentiable loss function is computed for the training examples (often done in batches) and the gradients w.r.t.\ the weights of the network are computed. Using these gradients, the weights are updated in a gradient descent step. Typically, more complex update rule that take into account change momentum (e.g. Adam optimisation\cite{adam}) are used as they converge faster to a local minimum. 
+The learning process for convolutional neural network is identical to the learning process for standard neural networks. A differentiable loss function is computed for the training examples (often done in batches) and the gradients w.r.t.\ the weights of the network are computed. Using these gradients, the weights are updated in a gradient descent step. Typically, more complex update rules that take into account momentum (e.g. Adam optimisation \cite{adam}) are used as they converge faster. 
 
 \subsection{Gaussian processes}
 Formally, a Gaussian Process is defined as a collection of random variables, any finite number of which have (consistent) joint Gaussian distributions. A Gaussian process therefore defines a distribution over functions and is fully specified by a mean function $m(x)$ and a covariance function $k(x, x')$. Write $f \sim \mathcal{GP}(m, k)$ meaning $f$ is distributed as a GP with mean $m$ and covariance $k$.
@@ -94,18 +92,17 @@ We can now use this GP as a prior for Bayesian inference. Let $\mathbf{f}$ be th
 \begin{equation*}
 \begin{bmatrix} \mathbf{f} \\ \mathbf{f}_* \end{bmatrix} 
 = 
-\mathcal{N}\Big(\begin{bmatrix} \mathbf{\mu} \\ \mathbf{\mu}_* \end{bmatrix}, \begin{bmatrix}\mathbf{\Sigma} & \mathbf{\Sigma}_* \\ \mathbf{\Sigma}_*^T & \mathbf{\Sigma}_{**} \end{bmatrix} \Big)
+\mathcal{N}\Big(\begin{bmatrix} \bm{\mu} \\ \bm{\mu}_* \end{bmatrix}, \begin{bmatrix}\bm{\Sigma} & \bm{\Sigma}_* \\ \bm{\Sigma}_*^T & \bm{\Sigma}_{**} \end{bmatrix} \Big)
 \end{equation*}
-where $\mathbf{\mu}_*$ are the test means, $\mathbf{\Sigma}_*$ are the training-test covariances, and $\mathbf{\Sigma}_{**}$ are the test-test covariances. Since we know the training values $\mathbf{f}$, we are interested in the conditional distribution of $\mathbf{f}_*$ given $\mathbf{f}$:
+where $\bm{\mu}_*$ are the test means, $\bm{\Sigma}_*$ are the training-test covariances, and $\bm{\Sigma}_{**}$ are the test-test covariances. Since we know the training values $\mathbf{f}$, we are interested in the conditional distribution of $\mathbf{f}_*$ given $\mathbf{f}$:
 \begin{equation*}
 	\mathbf{f} \big\vert \mathbf{f}_* \sim
-	\mathcal{N} \big( \mathbf{\mu}_* + \mathbf{\Sigma}_*^T \mathbf{\Sigma}^{-1}(\mathbf{f}-\mathbf{\mu}), \mathbf{\Sigma}_{**} - \mathbf{\Sigma}^T_*\mathbf{\Sigma}^{-1}\mathbf{\Sigma}_* \big)
+	\mathcal{N} \big( \bm{\mu}_* + \mathbf{\Sigma}_*^T \mathbf{\Sigma}^{-1}(\mathbf{f}-\bm{\mu}), \mathbf{\Sigma}_{**} - \mathbf{\Sigma}^T_*\mathbf{\Sigma}^{-1}\mathbf{\Sigma}_* \big)
 \end{equation*}
-This corresponds to a posterior Gaussian process, given by
+This corresponds to a posterior Gaussian process $f \big\vert \mathcal{D} \sim \mathcal{GP}(m_\mathcal{D}, k_\mathcal{D})$, where
 \begin{align*}
-	f \big\vert \mathcal{D} &\sim \mathcal{GP}(m_\mathcal{D}, k_\mathcal{D}), \\
-	& m_\mathcal{D}(x) = m(x) + \Sigma(X,x)^T\Sigma^{-1}(\mathbf{f}-\mathbf{m})\\
-	& k_\mathcal{D}(x, x') = k(x, x') - \Sigma(X,x)^T\Sigma^{-1}\Sigma(X, x')
+	 m_\mathcal{D}(x) = m(x) + \Sigma(X,x)^T\Sigma^{-1}(\mathbf{f}-\mathbf{m})\\
+	k_\mathcal{D}(x, x') = k(x, x') - \Sigma(X,x)^T\Sigma^{-1}\Sigma(X, x')
 \end{align*}
 where $\Sigma(X, x)$ is a vector of covariances between every training case in $X$ and x. Furthermore, it is easy to incorporate noise in the observations. Assuming i.i.d.\ additive Gaussian noise, every $f(x)$ now has extra covariance with itself with a magnitude equal to the noise variance $\sigma_n^2$:
 \begin{equation*}
@@ -151,7 +148,7 @@ In this project, I focus on a different way to obtain those uncertainty bounds: 
 \subsection{Convolutional Neural Network architecture}
 The first step consists of training the convolutional neural network, which can be done using one of the many deep learning libraries. For example, I use Keras \cite{chollet2015keras} which defines an extra abstraction layer above TensorFlow. The network architecture is provided in the Keras tutorial for image classifcation on MNIST. The first two layers are convolutional layers with $3 \times 3$ kernels and ReLU activations, where $\textrm{ReLU}(x) = \max(x, 0)$. These layers have respectively 32 and 64 feature maps. A max-pooling layer with kernel size $2 \times 2$ is then applied to the output of the convolutional layer. The final 2 layers are fully connected layers consisting of 128 and 10 neurons respectively. The first fully connected layer has a ReLU activation. The last fully connected layer uses a softmax activation, which outputs a probability distribution over the 10 classes representing the 10 digits. Furthermore, Dropout \cite{srivastava2014dropout} is applied after the max-pooling layer with $p=0.25$ and after the first fully connected layer with $p=0.5$, where $p$ is the probability of dropping a neuron. The network is trained using an Adadelta optimiser over 10 epochs with batches of size 128.
 
-\subsection{Gaussian process}
+\subsection{Training of the Gaussian process}
 From the trained CNN model, the activations of the last hidden layer are extracted. These correspond to a vector of size 128 for each input image, and can be thought of as the features extracted by the CNN for classification. Using these features I then train a Gaussian Process. This has the advantage of being a lower dimensional classification task compared to classifying the entire input image directly, whilst still being fully automatic, i.e.\ there are no user-defined features. However, the MNIST dataset, with 60,000 training images, is considered a large dataset for GPs because inference takes $\mathcal{O}(n^3)$ time where $n$ is the number of training instances \cite{hensman2015scalable}. To make the training possible, I use GPFlow \cite{GPflow2017}, which implements various approximation algorithms for Gaussian Processes. Furthermore, the library is built on top of TensorFlow which has the further advantage of being usable on a GPU out-of-the-box, which provides a further speed-up. More precisely, I use the Sparse Variational Gaussian Process Classifier presented by Hensman et al.\ \cite{hensman2015scalable}. The model learns a set of m inducing points which are used instead of the training points in the Gaussian process. Typically, $m < n$, which makes the task tractable as its complexity is $\mathcal{O}(nm^2)$. For the experiments done in this project I chose to use 600 inducing points, which allowed the model to be trained in about 15 minutes on a NVidia Titan Xp GPU.
 
 I train the Gaussian process with a simple kernel as it is sufficient to obtain good accuracy. The kernel consists of a Matern kernel  \cite{rasmussen2006gaussian} with $\nu =\frac{3}{2}$ and a white noise function to account for the noise in the input data.
@@ -160,7 +157,7 @@ I train the Gaussian process with a simple kernel as it is sufficient to obtain 
 \label{section/reject_option}
 One way to incorporate the model uncertainty is by allowing the model to say ``I don't know''. For example, if the model was presented with an image of the letter `a', it would still classify the image into one of the 10 digits, which might not be a desired outcome. Instead, the model should be able to reject classification for the inputs in which the uncertainty is too high. This is known as \textbf{classification with a reject option} \cite{chow1970optimum}. 
 
-Given uncertainty bounds with each class probability, we can design the model to reject classification according to certain rejection rules. For example, we could decided to reject if the standard deviation of the highest probability is above a pre-defined threshold. Another rejection rule could be to reject if the second highest class probability lies within a certain factor $\epsilon$ of the standard deviations of the highest probability, i.e.\ the model would reject if
+Given uncertainty bounds with each class probability, we can design the model to reject classification according to certain rejection rules. We could decided to reject if the standard deviation of the highest probability is above a pre-defined threshold. Another rejection rule could be to reject if the second highest class probability lies within a certain factor $\epsilon$ of the standard deviations of the highest probability, i.e.\ the model would reject if
 \begin{equation*}
 	\vert f_p(\mathbf{x}^{(i)})_1 - f_p(\mathbf{x}^{(i)})_2 \vert < \epsilon f_{\textrm{std}}(\mathbf{x}^{(i)})_1
 \end{equation*}
@@ -189,7 +186,7 @@ Using the Gaussian process with the CNN features, the accuracy of the model on t
 
 \begin{table}[h]
 \centering	
-{\renewcommand{\arraystretch}{1.4} %<- modify value to suit your needs
+{\renewcommand{\arraystretch}{1.2} %<- modify value to suit your needs
 \begin{tabular}{ c | c c}
 \textbf{Model} & \textbf{Accuracy} & \textbf{Misclassified images}\\
 \hline
@@ -202,15 +199,15 @@ GP & $99.28\%$  & $72$\\
 \end{table}
 
 Furthermore, it is interesting to inspect how uncertain the Gaussian process is for the different test images. In order to do this, I plot in figure \ref{fig/mnist_cum_stds} the cumulative distribution of the standard deviations for the most likely class for both correctly and incorrectly classified test images. For the correctly classified examples, the model's uncertainty is low: the model gives the correct class probability with a standard deviation of less than $0.1$ for $97.3\%$ of the correctly classified images. However, for the incorrectly classified images, the standard deviation of the most likely class seems to be higher: The model predicts a standard deviation below $0.1$ for only $19.4\%$ of the incorrectly classified images. This suggests that the model is generally less certain of its prediction in the cases where it predicted the wrong class.
-\begin{figure}[h]
+\begin{figure}
 	\centering
-	\includegraphics[scale=0.5]{mnist_cum_stds}
+	\includegraphics[scale=0.3]{mnist_cum_stds}
 	\caption{Cumulative distribution of the standard deviations for the most likely class for both correctly and incorrectly classified test images.}
 	\label{fig/mnist_cum_stds}
 \end{figure}
 
 \subsection{Noisy MNIST (n-MNIST)}
-Next, I evaluate both the CNN and the Gaussian process on the n-MNIST dataset \cite{DBLP:journals/corr/BasuKGDMN15}. The dataset consists of the MNIST images, but modified in 3 different ways so as to make the classification task harder. The first set of images is created by adding white Gaussian noise with a signal-to-noise ratio of 9.5 to the images. The second set of images is obtained by emulating a linear motion blur. The last set of images is the hardest to classify as it is created by reducing the contrast and also adding white Gaussian noise to the original images. Figure \ref{fig/noisy_mnist_example} shows an example image taken from the 3 datasets.
+I evaluate both the CNN and the Gaussian process on the n-MNIST dataset \cite{DBLP:journals/corr/BasuKGDMN15}. The dataset consists of the MNIST images, but modified in 3 different ways so as to make the classification task harder. The first set of images is created by adding white Gaussian noise with a signal-to-noise ratio of 9.5 to the images. The second set of images is obtained by emulating a linear motion blur. The last set of images is the hardest to classify as it is created by reducing the contrast and also adding white Gaussian noise to the original images. Figure \ref{fig/noisy_mnist_example} shows an example image taken from the 3 datasets.
 
 \begin{figure}
 	\centering
@@ -223,7 +220,7 @@ The task of classifying examples whose underlying distribution is different from
 
 \begin{table}[h]
 \centering	
-{\renewcommand{\arraystretch}{1.4} %<- modify value to suit your needs
+{\renewcommand{\arraystretch}{1.2} %<- modify value to suit your needs
 \begin{tabular}{ c | c c c}
 \textbf{Model} & \multicolumn{3}{c}{\textbf{Accuracy}}\\
 & AWGN & Motion blur & Reduced contrast\\
@@ -238,13 +235,12 @@ GP & $93.34\%$  & $92.09\%$ & $70.13\%$ \\
 
 We can again inspect how uncertain the model is when classifying the noisy dataset by plotting the cumulative distributions of the standard deviations of the most likely digit. Figure \ref{fig/noisy_mnist_cum_stds} shows the resulting plots for each dataset, which indeed suggest that the uncertainty increases as the model is asked to classify images that are increasingly different from those it was trained on. The uncertainty for the additive white Gaussian noise dataset is higher than the uncertainty for the MNIST test dataset. This is shown by the fact that the cumulative distribution for the correctly classified images in the AWGN images is lower. Similarly, the cumulative distribution further decreases for the motion blur and reduced contrast images, with a lower classification accuracy corresponding to a higher uncertainty.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{noisy_mnist_cum_stds}
 	\caption{Cumulative distribution of standard deviations for correctly and incorrectly classified test images on the 3 n-MNIST datasets.}
 	\label{fig/noisy_mnist_cum_stds}
 \end{figure}
-
 
 \subsection{Classifying with a reject option}
 Finally, I also evaluate the performance of the GP augmented with a reject option according to the rejection rule described in \ref{section/reject_option} on the MNIST test dataset. Figure \ref{fig/r_accs_alpha_mnist} (left) shows the R-accuracy with varying $\alpha$ and fixed $\beta=0$ for different values of $\epsilon$. In the cases where $\alpha > 1$, that is when the cost of misclassification is higher than the reward obtained by a correct classification, there seem to be an optimal value of $\epsilon$ lying between 20 and 40. 
@@ -253,8 +249,8 @@ Furthermore, there is indeed a trade-off between the number of misclassified but
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.48]{r_accs_alpha_mnist}
-	\includegraphics[scale=0.48]{r_acc_mnist}
+	\includegraphics[scale=0.38]{r_accs_alpha_mnist}
+	\includegraphics[scale=0.38]{r_acc_mnist}
 	\caption{Left: R-accuracy obtained using varying $\epsilon$ and $\alpha$ but setting $\beta=0$. For $\alpha>0$ there seems to be an optimal value of $\epsilon$ around 30. Right: Number of examples misclassified or rejected. This illustrates the trade-off between the number of misclassified but accepted and correctly classified but rejected examples.}
 	\label{fig/r_accs_alpha_mnist}
 \end{figure}
@@ -264,14 +260,14 @@ Only 72 of the 10,000 MNIST test images are misclassified by the GP. To gain som
 
 \subsection{Uncertainty with additive white noise}
 A further property the model uncertainty should obey is that as an image becomes more and more distorted, the uncertainty should increase. To verify that this holds I add increasingly more white Gaussian noise to a test digit and then ask the GP to make predictions for those images. The results are shown in figure \ref{fig/awgn_predictions} for an image of the digit `6'.
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=1.0\textwidth]{awgn_predictions}
 	\caption{Top: Test images with increasingly more additive white Gaussian noise. Bottom: Gausssian process predictions for the test images. The error bars show the standard error for each class.}
 	\label{fig/awgn_predictions}
 \end{figure}
 Note that for the last few images, it becomes almost impossible to discern the original digit from the noise (especially when looked at individually, rather than next to the original image). Indeed, the model wrongly classifies the last image as a `5', although it does so with a high uncertainty. Figure \ref{fig/awgn_predictions_stds} shows the probability and uncertainty assigned to the digit `6' for the 10 images. As hoped for, the uncertainty increases as more noise is added to the image. Especially noteworthy is the increase of the standard deviation relative to the class probability.
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{awgn_predictions_stds}
 	\caption{Probability and standard deviation assigned to class `6' for the 10 images shown in figure \ref{fig/awgn_predictions}. Also plotted is the standard deviation relative to the class proability.}
@@ -279,14 +275,17 @@ Note that for the last few images, it becomes almost impossible to discern the o
 \end{figure}
 
 \subsection{CNN features visualisation}
-Finally, I show the features learned by the CNN by reducing the number of dimensions of the features to 2 using the t-SNE \cite{maaten2008visualizing} dimensionality reduction technique. The learned features are shown for the MNIST test dataset and for the additive white Gaussian noise images of the n-MNIST dataset.
+Finally, I show the features learned by the CNN by reducing the number of dimensions of the features to 2 using the t-SNE \cite{maaten2008visualizing} dimensionality reduction technique. The learned features are shown for the MNIST test dataset and for the additive white Gaussian noise images of the n-MNIST dataset. Both plots show distinct clusters for the 10 different classes, but the clusters for the n-MNIST dataset seem to be less distinct. This can be explained by the fact that the network was trained on the MNIST dataset rather than on the n-MNIST dataset.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{embeddings_visualisation.png}
 	\includegraphics[scale=0.48]{noisy_embeddings_visualisation}
 	\caption{Learned features for the MNIST test dataset and the AWGN n-MNIST test dataset. The dimensionality of the features were reduced using t-SNE.}
 \end{figure}
+
+\section{Conclusion}
+In this project, I focused on obtaining uncertainty bounds for the MNIST and n-MNIST dataset by combining a CNN with a Gaussian process and analysed these uncertainty bounds. I showed that the uncertainty bounds given by the GP increase when presented with input data coming from a different underlying distribution than the training data. I also presented a way to add a reject option to the model by using the uncertainty bounds and letting the model reject classification for the example for which it is too uncertain. I evaluated this model using a custom metric, the R-accuracy and showed how different hyper-parameters of the metric and model affect the results. Finally, I inspected how the uncertainty bounds increase when the model is presented with increasingly more perturbed images.
 
 \small
 

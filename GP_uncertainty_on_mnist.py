@@ -13,11 +13,7 @@ from matplotlib import pyplot as plt
 import time
 
 load_data_from_disk = True
-<<<<<<< Updated upstream
-restore_model = True
-=======
 restore_model = False
->>>>>>> Stashed changes
 save_model = False
 
 if load_data_from_disk:
@@ -158,17 +154,14 @@ if save_model:
     saver.save(sess, "models/gp.ckpt")
     print("saved vars")
 
-<<<<<<< Updated upstream
 if save_model:
     saver = tf.train.Saver()
     sess = gpflow.session_manager.get_default_session()
     saver.save(sess, "models/gp.ckpt")
     print("saved vars")
-=======
 
 p, var = m.predict_y(X_test)
 np.save("predictions/X_test.npy", [p, var])
->>>>>>> Stashed changes
 
 print("Predictions for test data done")
 print(p.shape)

@@ -7,6 +7,8 @@ Hence, instead of just obtaining a probability for each class, we also get a sta
 ![Example output for test image](figs/gp_test.png)
 
 ## Code
+<Warning>Warning: This code was produced for a project with a tight deadline and is therefore not cleaned up and could do with a lot of refactoring...</Warning>
+
 The entry point to train and evaluate this approach can be found in [GP_uncertainty_on_mnist.py](GP_uncertainty_on_mnist.py). The other contain code for visualization and for a more in depth analysis of the results.
 
 ## Results

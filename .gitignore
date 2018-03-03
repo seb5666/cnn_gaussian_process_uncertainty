@@ -1,6 +1,6 @@
 .ipynb_checkpoints/
 data/
 models/
-predictions/
+predictions/*
 __pycache__/
 *.swp

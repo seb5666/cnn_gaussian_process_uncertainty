@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  28 FEB 2018 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.11)  28 FEB 2018 09:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,7 +886,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  31i,8n,38p,1537b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/sebastian/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (10 pages, 436865 bytes).
+Output written on "/Users/sebastian/Documents/Cambridge/Part 3/Probabilistic Machine Learning/practical/report/.texpadtmp/report.pdf" (10 pages, 436863 bytes).
 PDF statistics:
  315 PDF objects out of 1000 (max. 8388607)
  264 compressed objects within 3 object streams
